@@ -1,0 +1,379 @@
+/* FoodList.css */
+
+* {
+  /* box-sizing: border-box; */
+}
+
+.loading-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #8e9199;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  max-height: 35px;
+}
+
+
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #3498db;
+  /* Blue color for the spinner */
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  transform: translate(-50%, -50%);
+  animation: spin 1s linear infinite;
+  display: flex;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.food-list {
+  /* margin: 20px; */
+  display: grid;
+  grid-template-columns: 250px 950px 15%;
+  /* width: 100%; */
+  /* display: flex;
+  flex-wrap: wrap; */
+  /* overflow: auto; */
+  /* display: "flex";
+  align-items: "flex-start"; */
+}
+
+.SideBar {
+  margin-top: 30%;
+  margin-left: 15%;
+  row-gap: 5%;
+  padding: 8px;
+  font-size: 20px;
+  display: block;
+  /* position: fixed; */
+}
+
+.food-item {
+  display: block;
+}
+
+.food-list-mobile {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.name-category {
+  padding-left: 5%;
+  padding-top: 10px;
+  margin-top: 30px;
+
+}
+
+.food-items {
+  /* padding-top: 1px; */
+  box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  /* margin-right: 17%; */
+  padding-bottom: 3%;
+}
+
+.foods-by-category {
+  margin-left: 5%;
+  /* margin-top: 3%; */
+  margin-right: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+
+
+}
+
+.namesofcategory {
+  top: 136px;
+  padding-top: 30px;
+  position: sticky;
+  /* margin-right: 5%; */
+}
+
+.food-card {
+  width: auto;
+  height: 450px;
+  max-width: 250px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.2s ease-in-out;
+  display: grid;
+  grid-template-rows: 90% 10%;
+  justify-content: space-between;
+}
+
+.food-card:hover {
+  /* transform: scale(1.02); */
+  cursor: pointer;
+}
+
+.food-image {
+  width: 90%;
+  margin: 5%;
+  max-height: 80%;
+  object-fit: cover;
+}
+
+.food-details {
+  padding: 10px;
+  margin-bottom: 0px;
+}
+
+.food-name {
+  font-size: 18px;
+  margin: 0;
+}
+
+
+
+.food-price {
+  font-size: 16px;
+  margin: 0;
+  font-weight: bold;
+  color: #ffffff;
+  /* Price color */
+}
+
+.category-filter {
+  display: flex;
+  align-items: center;
+  /* background-color: #ababab; Blue background color */
+  /* color: #fff; Text color */
+  padding: 10px;
+}
+
+.button {
+  /* width: 100%; */
+  padding: 10px;
+  background-color: #c20a0a;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  /* max-height: 35px; */
+  /* flex: 1; */
+  margin: 5%;
+  margin-top: 0px;
+}
+
+label {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+select {
+  background-color: #fff;
+  /* Background color */
+  color: #333;
+  /* Text color */
+  border: 2px solid #515152;
+  /* Blue border */
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+/* Style select element on hover or focus */
+select:hover,
+select:focus {
+  background-color: #f0f0f0;
+  outline: none;
+}
+
+.active {
+  color: #d02431;
+  font-weight: bold;
+  transition: 0.1s;
+
+}
+
+.category {
+  margin-bottom: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+
+}
+
+.food-description {
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.20;
+  letter-spacing: normal;
+  text-align: center;
+  color: #3e3d3f;
+  height: calc(1.05rem * 3);
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.category:hover {
+  cursor: pointer;
+}
+
+
+.category-image {
+  width: 20px;
+}
+
+@media (max-width: 1230px) {
+  .category {
+    border-right: 1px solid #ccc;
+    color: #888888;
+    font-size: 22px;
+  }
+
+  .food-list {
+    display: inline;
+  }
+
+  .SideBar {
+    display: inline;
+
+  }
+
+  .namesofcategory::-webkit-scrollbar {
+    width: 0;
+    display: none;
+  }
+
+  .namesofcategory {
+    scrollbar-width: none;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+    top: 136px;
+    white-space: nowrap;
+    list-style: none;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    border-bottom: 2px solid #888888;
+    position: sticky;
+    background-color: white;
+    padding-left: 5%;
+    /* margin-right: 5%; */
+
+  }
+
+  .food-item {
+    display: grid;
+    grid-template-columns: 960px;
+    padding-right: 5%;
+    padding-left: 3%;
+    row-gap: 15px;
+    justify-content: center;
+  }
+
+  .foods-by-category {
+    margin-left: 1%;
+    margin-right: 1%;
+    gap: 2px;
+  }
+
+  .food-card {
+    margin: 0px;
+    max-width: 230px;
+
+  }
+
+}
+
+@media (max-width: 952px) {
+  .food-item {
+    display: grid;
+    grid-template-columns: 730px;
+    margin-left: 3%;
+    margin-right: 5%;
+
+  }
+
+  .header {
+    transition: 0.4s;
+  }
+}
+
+@media (max-width: 770px) {
+  .namesofcategory {
+    top: 100px;
+  }
+
+  .food-item {
+    display: inline-block;
+    width: 90%;
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+
+  .foods-by-category {
+    display: block;
+  }
+
+  .food-card {
+    max-width: 95%;
+    width: 95%;
+    height: 200px;
+    margin: 1%;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    border-radius: none;
+    box-shadow: none;
+  }
+
+  .food-info {
+    display: grid;
+    grid-template-columns: 155px 60%;
+  }
+
+  .food-name {
+    font-size: 14px;
+  }
+
+  .header {
+    padding-left: 45%;
+    transition: 0.4s;
+    height: 15vh;
+
+  }
+
+  .logo-icon img {
+    max-width: 50px;
+    display: flex;
+    margin: auto;
+  }
+
+  .log {
+    max-width: 25px;
+  }
+}

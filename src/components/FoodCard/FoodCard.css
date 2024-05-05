@@ -1,0 +1,48 @@
+.food{
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.c1{
+  display: grid;
+  grid-template-columns: 45% 40%;
+  align-items: baseline;
+  justify-content: start;
+  align-items: baseline;
+  justify-items: start;
+}
+.Price{
+  display: grid;
+  grid-template-columns: 40% 30%;
+  font-size: 200%;
+  gap: 2%;
+  align-items: stretch;
+  justify-content: start;
+
+}
+.button{
+  margin-top: 1%;
+  font-size: medium;
+}
+
+
+@media (max-width: 770px) {
+  .food{
+    display: block;
+    width: auto;
+    height: 80vh;
+  }
+  .options{
+    display: block;
+  }
+  .Price{
+    display: inline;
+    align-items: center;
+    text-align: center;
+  }
+  .c1{
+    display: inline;
+  }
+  .description{
+    text-align: center;
+  }
+}
